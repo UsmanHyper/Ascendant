@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url("https://fonts.googleapis.com/css?family=Space Grotesk");
+@import "assets/styles/helpers";
+@import "assets/styles/breakpoints.scss";
+@import "assets/styles/customUi";
+html, body { height: 100%; }
+body {
+    margin: 0;
+    
+    // font-family: 'Vodafone Rg', sans-serif !important;
+    font-size: 14px !important;
+    background: #f8f8f8;
+    color: #444;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Poppins; }
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-dialog-container{
+    border-radius: 15px !important;
+  }

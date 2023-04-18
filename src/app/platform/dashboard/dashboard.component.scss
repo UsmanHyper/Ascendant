@@ -1,0 +1,23 @@
+.without-underline {
+  text-decoration: none;
+}
+
+.breadcrumb {
+  padding: 6px 12px;
+}
+
+.breadcrumb-box {
+  padding-right: 8px;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.ng-select-container.ng-appearance-outline.ng-has-value {
+  width: 120px;
+}

@@ -1,0 +1,86 @@
+<div class="w-100-p h-100-p">
+    <div class="breadcrumb-box bg-white" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="breadcrumb breadcrumb-arrow m-0 bg-white" fxLayout="row" fxLayoutGap="4px">
+            <i class="ri-pie-chart-box-line"></i>
+            <a class="grey text-overflow text-decoration-none">Dashboard</a>
+        </div>
+    </div>
+    <img *ngIf="loadingCards || loadingGraphs" src="/assets/images/red-loader.gif" alt="Loading" class="loading"
+        width="150px" height="150px">
+
+
+    <div class="page-content container-fluid">
+        <div class="panel panel-default card round shadow mb-30" style="overflow: visible !important;">
+            <div class="panel-heading mb-0">
+                <h3 class="panel-title fw-600 bg-theme1 white1 m-0">Map</h3>
+            </div>
+
+            <div class="panel-body p-15" style="padding: 15px !important;">
+                <div class="filters pb-10 d-flex" style="border-bottom: 1px solid #eee;">
+                    <ng-select class="fw-400 w-10-p" style=" width: 120px;" [clearable]="false"[searchable]="false" appearance="outline"
+                        [formControl]="flowdata" (change)="onSelectMainFlow($event, 'map')">
+                        <ng-option *ngFor="let oArea of flows" [value]="oArea.id">{{ oArea.name }}
+                        </ng-option>
+                    </ng-select>
+                    <ng-select class="ml-5 w-16-p fw-400 " style="margin-left: 5px !important;" [clearable]="false"[searchable]="false"
+                        appearance="outline" [formControl]="subflow" (change)="onSelectSubFlow($event, 'map')">
+                        <ng-option value="all">All </ng-option>
+                        <ng-option *ngFor="let oArea of cityArray" [value]="oArea.id || oArea.device_id">{{ oArea.name
+                            }}
+                        </ng-option>
+                    </ng-select>
+                </div>
+                <app-googlemaps [filterData]="selectFilterdataonMaps" [filterDataOption]="selectFilterdataOption"></app-googlemaps>
+            </div>
+        </div>
+
+        <div class="filters mb-10 pb-10 d-flex" style="border-bottom: 1px solid #eee;">
+            <ng-select class="fw-400 " style=" width: 120px;" [searchable]="false" [clearable]="false"
+                appearance="outline" [formControl]="cardFlowdata" (change)="onSelectMainFlow($event, 'cards')">
+                <ng-option *ngFor="let oArea of cardsFlow" [value]="oArea.id">{{ oArea.name }}
+                </ng-option>
+            </ng-select>
+
+            <ng-select class="ml-5 w-16-p fw-400" style="margin-left: 5px !important;" [searchable]="false"
+                [clearable]="false" appearance="outline" [formControl]="cardSubflow"
+                (change)="onSelectSubFlow($event, 'cards')">
+
+                <ng-option *ngFor="let oArea of cardsSubFlow" [value]="oArea.id || oArea.device_id">{{ oArea.name }}
+                </ng-option>
+            </ng-select>
+        </div>
+
+        <div class=" ">
+            <app-cards [dataArray1]="cardsData"></app-cards>
+        </div>
+
+        <!--Line Chart-->
+        <div class="row ">
+            <div class="col-lg-12  card-group-row__col">
+                <div class="panel panel-default card round shadow fs-12 ">
+                    <div class="panel-heading mb-0">
+                        <h3 class="panel-title fw-600 bg-theme1 white1 m-0"> Temperature &amp; Humidity </h3>
+                    </div>
+                    <div class="panel-body p-15" style="padding: 15px !important;">
+                        <app-line-chart [graphData]="tempGraphData" (signal)="onGraphSignals($event)"></app-line-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Steam Chart-->
+        <div class="row " style="margin-top: 0px !important;">
+            <div class="col-lg-12  card-group-row__col">
+                <div class="panel panel-default card round shadow fs-12 ">
+                    <div class="panel-heading mb-0">
+                        <h3 class="panel-title fw-600 bg-theme1 white1 m-0"> Gasses (CO, NO2, SO2, O3)</h3>
+                    </div>
+                    <div class="panel-body p-15" style="padding: 15px !important;">
+                        <app-stream-chart [graphData]="gasesGraphData"
+                            (signal)="onGraphSignals($event)"></app-stream-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
