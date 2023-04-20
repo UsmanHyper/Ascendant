@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
     this.validateForm = this.fb.group({
       custEmail: [null, [Validators.email, Validators.required, Validators.pattern(this.emailPattern)]],
-      custPassword: [null, [Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,16}$')]],
+      custPassword: [null, [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,16}$')]],
       remember: [true],
     });
     this.checkFuntion();
@@ -60,9 +60,9 @@ export class LoginComponent implements OnInit {
       email: this.validateForm.controls['custEmail'].value,
       password: this.validateForm.controls['custPassword'].value,
     };
+    this.router.navigateByUrl('ac/dashboard');
+    // this.router.navigate(['/ac/dashboard']);
 
-        // this.router.navigate(['/home']);
-      
   }
 
   getErrorMessageEmail() {
@@ -77,11 +77,11 @@ export class LoginComponent implements OnInit {
       return 'Password should be 6 to 16 digit long';
     }
 
-    return 'Password should be 6 to 16 digit ' ;
+    return 'Password should be 6 to 16 digit ';
   }
 
   onForgotPassword() {
     // localStorage.setItem('reqType', 'forgot');
     this.router.navigateByUrl('forgot-password');
-}
+  }
 }

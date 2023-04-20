@@ -1,9 +1,25 @@
 import { Component, Input, OnInit } from '@angular/core';
-i
-// import { Menu } from 'src/app/interfaces/model';
+import { Title } from '@angular/platform-browser';
 
 import { environment } from 'src/environments/environment';
 
+
+declare interface RouteInfo {
+    path: string;
+    title: string;
+    icon: string;
+    icon_active: string;
+    class: string;
+  }
+  export const ROUTES: RouteInfo[] = [
+    { path: '/dashboard', title: 'Dashboard', icon: '../../../../assets/images/dashbaord_black.png', icon_active: '../../../../assets/images/dashboard_white.png', class: '' },
+    { path: '/channelManagement', title: 'Channel Management', icon: '../../../../assets/images/channel_black.png', icon_active: '../../../../assets/images/channel_white.png', class: '' },
+    { path: '/roomAvailable', title: 'Room Availbility', icon: '../../../../assets/images/door_black.png', icon_active: '../../../../assets/images/door_white.png', class: '' },
+    { path: '/roomManagement', title: 'Room Management', icon: '../../../../assets/images/door_black.png', icon_active: '../../../../assets/images/door_white.png', class: '' },
+    { path: '/pricenpush', title: 'Price & Push Channnel', icon: '../../../../assets/images/lable_black.png', icon_active: '../../../../assets/images/lable_white.png', class: '' },
+    { path: '/userMangment', title: 'User Management', icon: '../../../../assets/images/user_black.png', icon_active: '../../../../assets/images/user_white.png', class: '' },
+    { path: '/logout', title: 'Log Out', icon: '../../../../assets/images/logout.png', icon_active: '../../../../assets/images/logout.png', class: 'bottomlink' },
+  ]
 @Component({
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
@@ -11,47 +27,38 @@ import { environment } from 'src/environments/environment';
 })
 export class SidebarComponent implements OnInit {
     // menus: Menu[];
-    @Input() isCollapsed: boolean;
+    @Input() isCollapsed: boolean | any;
+    menuItems: any[] = ROUTES;
 
-    constructor(
-       
-    ) {
-        this.isCollapsed = false;
-        // this.menus = [];
-    }
-
+    constructor(private titlePage: Title) {}
+  
     ngOnInit(): void {
-        // setTimeout(() => {
-        //     let menu: any = localStorage.getItem('menu');
-        //     this.menus = JSON.parse(menu);
-        // }, 100);
-        // this.getMenu();
+      this.titlePage.setTitle('Dashboard');
+      // this.menuItems = ROUTES.filter(menuItem => menuItem);
     }
-
-    // getMenu() {
-    //     const slug = `${environment.userms}/users/menu-preferences`;
-        
-    //     return this.apiService.get(slug).subscribe((resp: any) =>
-    //     {
-    //         this.menus = resp.data;
-    //         localStorage.setItem('menu', JSON.stringify(this.menus));
-    //     }, (err: any) =>
-    //     {
-    //         this.toastrService.error(err.error['message'], 'Error',
-    //         { progressAnimation: 'decreasing', progressBar: true, timeOut: 3000 });
-    //     });
-    // }
-
-    // onSelectedItem(menu: Menu[], idx: number) {
-    //     menu[idx].expanded = !menu[idx].expanded;
-    //     for (let i = 0; i < menu.length; i++) {
-    //         if (menu[idx].expanded) {
-    //             menu[i].expanded = false;
-    //             menu[idx].expanded = true;
-    //         } else {
-    //             menu[idx].expanded = false;
-    //         }            
-    //     }
-    // }
-
-}
+  
+    onButtonGroupClick($event: any) {
+      let clickedElement = $event.target;
+  
+      if (clickedElement.nodeName === 'A') {
+        let isCertainButtonAlreadyActive = clickedElement.parentElement.querySelector('.active');
+        // if a Button already has Class: .active
+        if (isCertainButtonAlreadyActive) {
+          isCertainButtonAlreadyActive.classList.remove('active');
+        }
+  
+        clickedElement.className += ' active';
+      }
+    }
+    home() {}
+    rec() {}
+    set() {}
+    employee() {}
+    calender() {}
+  
+    pageTitle(title: string) {
+      console.log(title);
+      this.titlePage.setTitle(title);
+    }
+  }
+  

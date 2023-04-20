@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { VerifyTokenComponent } from './core/login/verify-token/verify-token.component';
+import { MainDashboardComponent } from '../app/core/dashboard/main-dashboard/main-dashboard.component';
 
 const routes: Routes = [
   {
@@ -11,13 +12,13 @@ const routes: Routes = [
     path: 'verify-token',
     component: VerifyTokenComponent
   },
-  // {
-  //   path: 'se',
-  //   loadChildren: () => import('./platform/platform.module').then(m => (m.PlatformModule))
-  // },
+  {
+    path: 'ac',
+    loadChildren: () => import('./platform/platform.module').then(m => (m.PlatformModule))
+  },
   {
     path: '**',
-    redirectTo: 'se',
+    redirectTo: 'ac',
   }
 ];
 

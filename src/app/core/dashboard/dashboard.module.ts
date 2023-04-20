@@ -5,9 +5,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
-
-
+import { MaterialModule } from 'src/app/material.module';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -18,7 +16,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     RouterModule,
     FlexLayoutModule,
-   
+    MaterialModule
   ],
   exports: [
     HeaderComponent,
