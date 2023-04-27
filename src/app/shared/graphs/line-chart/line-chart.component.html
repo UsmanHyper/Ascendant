@@ -1,0 +1,10 @@
+<div class="filters mb-10 pb-10" style="border-bottom: 1px solid #eee;">
+
+    <ng-select class="fw-400 " style=" width: 120px;" [searchable]="false" [clearable]="false" appearance="outline"
+        [formControl]="filterSelect" (change)="onSelectFilter($event)">
+        <ng-option *ngFor="let oArea of filterOption" [value]="oArea.id">{{ oArea.name }}
+        </ng-option>
+    </ng-select>
+</div>
+
+<div id="chartdiv" style="height: 300px;"></div>

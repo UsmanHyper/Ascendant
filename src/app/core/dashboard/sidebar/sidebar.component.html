@@ -9,17 +9,19 @@
 
 
 
-    
 
 
-    <div class="side-nav-content" style="margin-top: 120px;">
+
+    <div class="side-nav-content" style="margin-top: 180px;">
         <ul class="nav-list">
-            <li class="nav-list-item images {{item.class}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}" *ngFor="let item of menuItems "  >
-                <img  class="images" >
+            <li class="nav-list-item images {{item.class}}" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact : true}" *ngFor="let item of menuItems ">
+                <img *ngIf="item.img" class="images">
                 <span>
-                    <a   [routerLink]="[item.path]">{{item.title}}  </a> 
+                    <a class="{{item.class}}" [routerLink]="[item.path]">{{item.title}} </a>
                 </span>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" style="    margin-right: 10px;" fontIcon="chevron_right"></mat-icon>
+                <mat-icon *ngIf="item.img" aria-hidden="false" aria-label="Example home icon" style="    margin-right: 10px;"
+                    fontIcon="chevron_right"></mat-icon>
             </li>
         </ul>
     </div>

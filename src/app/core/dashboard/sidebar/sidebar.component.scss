@@ -4,84 +4,6 @@
   font-family: "Poppins";
   background: #fff;
 }
-
-// .site-menu-item {
-//   padding: 0;
-//   border-top: 1px solid #f9f9f9;
-//   cursor: pointer;
-// }
-
-// .site-menu-item :hover {
-//   background-size: cover;
-//   background-color: #f8f8f8;
-// }
-
-// .site-menu-child:hover {
-//   color: #e60000;
-// }
-
-// .active {
-//   background-color: #f8f8f8;
-// }
-
-// a {
-//   color: #444 !important;
-//   line-height: 36px;
-//   text-decoration: none;
-//   padding: 0 16px;
-// }
-
-// .site-menu-icon {
-//   color: #e60000;
-// }
-
-// .menu {
-//   height: 36px;
-//   width: 90px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   // position: relative;
-
-//   .menu-icon {
-//     display: flex;
-//     color: #e60000;
-//   }
-
-//   .menu-title {
-//     display: none;
-//   }
-
-//   .expanded-menu {
-//     display: none !important;
-//   }
-// }
-
-// .menu:hover {
-//   .menu-icon {
-//     display: none;
-//   }
-
-//   .menu-title {
-//     display: flex;
-//     font-size: 13px;
-//   }
-
-//   .expanded-menu {
-//     background: #fff;
-//     display: flex !important;
-//     flex-wrap: wrap;
-//     align-items: flex-start;
-//     width: 200px;
-//     position: absolute;
-//     left: 90px;
-//     // top: 0;
-//     z-index: 1;
-//   }
-// }
-@import "../../../../styles.scss";
-
-// .main-content {
 .sidebar {
   bottom: 0;
   display: flex;
@@ -335,16 +257,7 @@
     span a {
       color: #ffffff;
     }
-    // &::before {
-    //   content: "";
-    //   width: 4px;
-    //   height: 50px;
-    //   position: absolute;
-    //   left: 0px;
-    //   top: 0px;
-
-    //   background-color: #2c4a6c;
-    // }
+  
   }
   a {
     text-decoration: none;
@@ -360,10 +273,11 @@
     // margin-top: 60vh;
     // // bottom: 0;
     background-color: #ea504c;
-    margin: 0 20px;
+    margin: 0px 40px;
     color: #ffffff !important;
     position: absolute;
     width: 50%;
     bottom: 13px;
+    display: flex;
   }
 }

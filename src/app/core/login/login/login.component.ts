@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit {
       email: this.validateForm.controls['custEmail'].value,
       password: this.validateForm.controls['custPassword'].value,
     };
-    this.router.navigateByUrl('ac/dashboard');
+    this.router.navigateByUrl('/dashboard');
     // this.router.navigate(['/ac/dashboard']);
 
   }

@@ -1,0 +1,19 @@
+<div class="row card-group-row">
+  <ng-container *ngFor="let card of dataArray1">
+    <div [class]="card.class">
+
+      <div class="card p-14 mb-30 round shadow vertical-align text-center relative bg-theme white card-border"
+        style="background-color: rgb(230, 0, 0);">
+        <div class="vertical-align-middle">
+          <div class="fs-14 mt-0 mb-0">
+            {{card.title}}
+          </div>
+          <div class="fs-24 fw-200 mb-0 grey-8001">
+            {{card.value  || 'N/A' }}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ng-container>
+</div>
