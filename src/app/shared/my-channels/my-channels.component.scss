@@ -1,0 +1,38 @@
+
+
+
+
+
+.topline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .lable-div{
+        display: flex;
+        align-items: center;
+        .labeltitle {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 140%;
+            color: #403f3f;
+            margin-right: 13px;
+          }
+        .btn-customization {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 140%;
+            color: #ea504c;
+            background: #f2f2f2;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        
+            
+          }
+    }
+}

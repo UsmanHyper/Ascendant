@@ -8,10 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
     providers: [DatePipe]
 })
 export class DashboardComponent implements OnInit {
+    cardsData: any
 
-    @Input() selectcardfilter: any
-
-    constructor( ) {
+    constructor() {
+        this.cardsData = [
+            { name: 'Total Hotels', class: ' connectRoomtype', value: 220 , img:'../../../assets/images/hotel.svg'},
+            { name: 'Today Bookings', class: ' connectRoomrate ', value: 412 , img:'../../../assets/images/bed.svg' },
+            { name: 'Total Channels', class: ' connectRoomrate ', value: 510 , img:'../../../assets/images/channel.svg' },
+        ]
     }
     ngOnInit(): void {
 

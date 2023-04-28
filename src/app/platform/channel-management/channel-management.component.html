@@ -1,2 +1,28 @@
-<p>channel-management works!</p>
-<app-cards ></app-cards>
+<div fxLayout="column" fxLayout.lt-lg="row wrap" fxFlex="100">
+    <label class="labeltitle"> Channel Management </label>
+    <div class="carddiv">
+    <ng-container *ngFor="let data of cardsData" >
+        <div class="channelManagement card-group-row" style="display: flex; width: 282px">
+            <mat-card class="{{ data.class }} " style="     display: flex;  flex-direction: column; justify-content: space-between; align-items: stretch; ">
+                <mat-card-header>
+                    <mat-card-title class="cardeName">{{ data.name }}</mat-card-title>
+                    
+                </mat-card-header>
+                <mat-card-content> 
+                </mat-card-content>
+                <mat-card-actions class="cardaction">
+                    <mat-slide-toggle style="margin-left: 15px;">
+                        <p class="toggledescription">{{ data.discription }}</p>
+                    </mat-slide-toggle>
+                    <mat-icon style="color: #ffffff; margin-right: 10px" fontIcon="edit"></mat-icon>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </ng-container>
+</div>
+<div fxLayout="row" fxLayout.lt-lg="row wrap" fxFlex="60" style="background-color: aqua;">
+<div class="my-channel-body">
+    <app-my-channels></app-my-channels>
+</div>
+</div>
+</div>

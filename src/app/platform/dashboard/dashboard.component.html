@@ -1,1 +1,21 @@
-daashboard works
+<div fxLayout="row" fxLayout.lt-lg="row wrap" fxFlex="100">
+    <div class="carddiv">
+        <ng-container *ngFor="let data of cardsData">
+            <div class="channelManagement" style="display: flex; ">
+                <mat-card class="{{ data.class }}  " style="  display: flex;   flex-direction: row;justify-content: space-between;  align-items: center;">
+                    <img mat-card-image class="cardAvatar" src="{{data.img}}" alt="">
+                    <mat-card-header>
+
+                        <mat-card-title class="cardeName">{{ data.name }}</mat-card-title>
+
+                    </mat-card-header>
+                    <mat-card-content class="card_content">
+                        {{data.value}}
+                    </mat-card-content>
+
+                </mat-card>
+            </div>
+        </ng-container>
+    </div>
+
+</div>

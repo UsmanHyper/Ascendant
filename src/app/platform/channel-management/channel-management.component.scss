@@ -1,0 +1,64 @@
+.labeltitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 140%;
+  color: #403f3f;
+}
+
+.connectRoomtype {
+  background: #ea504c;
+  height: 143px;
+  box-shadow: 1px 1px 6px rgba(42, 68, 118, 0.13);
+  border-radius: 8px;
+}
+
+.connectRoomrate {
+  background: #17a1fa;
+  height: 143px;
+  box-shadow: 1px 1px 6px rgba(42, 68, 118, 0.13);
+  border-radius: 8px;
+}
+
+.carddiv{
+    display: flex;
+    .channelManagement {
+        margin-top: 42px;
+        .cardeName {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 140%;
+          color: #ffffff;
+        }
+      
+        .cardaction {
+          display: flex;
+          justify-content: space-between;
+        }
+        .toggledescription {
+          margin: 0;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 140%;
+          color: #ffffff;
+        }
+      }
+}
+
+
+.my-channel-body{
+    margin-top: 34px;
+}
+
+::ng-deep.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: #ffffff;
+}
+::ng-deep.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: #68f576;
+  box-shadow: inset 0px 6px 8px 3px rgba(0, 0, 0, 0.1);
+}

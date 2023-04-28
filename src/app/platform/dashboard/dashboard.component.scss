@@ -1,23 +1,62 @@
-.without-underline {
-  text-decoration: none;
+.connectRoomtype {
+  height: 75px;
+  background: #ffffff;
+  box-shadow: 1.02663px 1.02663px 6.15979px rgba(42, 68, 118, 0.13);
+  border-radius: 8.21305px;
 }
 
-.breadcrumb {
-  padding: 6px 12px;
+.connectRoomrate {
+  height: 75px;
+  background: #ffffff;
+  box-shadow: 1.02663px 1.02663px 6.15979px rgba(42, 68, 118, 0.13);
+  border-radius: 8.21305px;
+}
+.example-header-image {
+  background-size: cover;
 }
 
-.breadcrumb-box {
-  padding-right: 8px;
-}
+.carddiv {
+  display: flex;
+  .channelManagement {
+    width: 240px;
+    margin-right: 5px;
+    .cardeName {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15.3995px;
+      line-height: 140%;
+      color: #403f3f;
+      margin: 0;
+    }
+    .cardAvatar {
+      display: flex;
+      margin: 0;
+      width: 43px !important;
+      height: 43px!important;
+    }
+    .card_content {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20.5326px;
+      line-height: 140%;
+      margin: 0;
+      color: #403f3f;
+    }
 
-.loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.ng-select-container.ng-appearance-outline.ng-has-value {
-  width: 120px;
+    .cardaction {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .toggledescription {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 140%;
+      color: #ffffff;
+    }
+  }
 }

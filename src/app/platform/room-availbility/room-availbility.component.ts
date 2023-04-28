@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./room-availbility.component.scss']
 })
 export class RoomAvailbilityComponent implements OnInit {
-
-  constructor() { }
+  cardsData: any
+  constructor() {
+    this.cardsData = [
+      { name: 'Connect Room Type', discription: 'Distribute Across Channel', class: ' connectRoomtype' },
+      { name: 'Connect Room Rates', discription: 'Distribute Across Channel', class: ' connectRoomrate ' },
+    ]
+  }
 
   ngOnInit(): void {
   }

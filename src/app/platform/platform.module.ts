@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { PlatformRoutingModule } from './platform-routing.module';
 import { MainDashboardModule } from '../core/dashboard/dashboard.module';
 import { ChannelManagementComponent } from './channel-management/channel-management.component';
@@ -9,6 +8,14 @@ import { RoomAvailbilityComponent } from './room-availbility/room-availbility.co
 import { RoomManagementComponent } from './room-management/room-management.component';
 import { PriceNPushChannelComponent } from './price-n-push-channel/price-n-push-channel.component';
 import { UserManagementComponent } from './user-management/user-management.component';
+import { MaterialModule } from '../material.module';
+import {MatNativeDateModule} from '@angular/material/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MychannelModule } from '../shared/my-channels/my-channels-module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
     declarations: [
@@ -16,13 +23,23 @@ import { UserManagementComponent } from './user-management/user-management.compo
         RoomAvailbilityComponent,
         RoomManagementComponent,
         PriceNPushChannelComponent,
-        UserManagementComponent
+        UserManagementComponent,
+        DashboardComponent
+        
     ],
     imports: [
         CommonModule,
         PlatformRoutingModule,
         MainDashboardModule,
-        CardsModule
+        CardsModule,
+        MaterialModule,
+        MatNativeDateModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MychannelModule,
+        FlexLayoutModule,
+
+
     ]
 })
 export class PlatformModule { }
