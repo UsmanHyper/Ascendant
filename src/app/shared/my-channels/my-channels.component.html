@@ -1,15 +1,47 @@
-<div fxLayout="row" fxLayout.lt-lg="row wrap" fxFlex="80">
+<div class="w-100-p h-100-p ">
   <div class="topline">
-    <div class="lable-div"> 
-    <label class="labeltitle"> My Channels </label>
-    <button mat-raised-button  class="primary_btn btn-customization" >    <mat-icon style=" color:black; margin-right: 10px" fontIcon="add"></mat-icon> Add Channel </button>
+    <div class="lable-div">
+      <label class="labeltitle"> My Channels </label>
+
+      <button mat-raised-button class="primary_btn btn-customization"> <mat-icon
+          style=" color:black; margin-right: 10px" fontIcon="add"></mat-icon> Add Channel </button>
     </div>
     <div class="arrow" style="margin-right: 30px;">
-        <mat-icon style=" color:#ea504c; margin-right: 10px ; transform: rotate(180deg)" fontIcon="trending_flat"></mat-icon>
-        <mat-icon style=" color:#ea504c; margin-right: 10px" fontIcon="trending_flat"></mat-icon>
-    </div>
-</div>
-    <div style="display: flex;">
+      <!-- <mat-icon style=" color:#ea504c; margin-right: 10px ; transform: rotate(180deg)"
+        fontIcon="trending_flat"></mat-icon>
+      <mat-icon style=" color:#ea504c; margin-right: 10px" fontIcon="trending_flat"></mat-icon> -->
 
+      <button mat-icon-button color="warn" >
+        <mat-icon style=" margin-right: 10px ; " fontIcon="west"></mat-icon>
+
+      </button>
+      <button mat-icon-button color="warn" >
+        <mat-icon fontIcon="east"></mat-icon>
+
+      </button>
     </div>
-    </div>
+  </div>
+  <div class="carddiv">
+
+
+    <!-- <div class="channelManagement" style="display: flex; width: 282px" *ngFor="let data of cardsData"> -->
+    <mat-card *ngFor="let data of cardsData" class="card-body" style="margin-right:35px ;width: 255px;background: #FFFFFF;
+          box-shadow: 1.08945px 1.08945px 6.5367px rgba(42, 68, 118, 0.13);
+          border-radius: 8.7156px;">
+      <mat-card-header style="justify-content: flex-end;">
+        <mat-slide-toggle [checked]="true">
+          <p class="toggledescription">{{ toggleSwitch }}</p>
+        </mat-slide-toggle>
+      </mat-card-header>
+      <mat-card-content style="margin: 20px 21px 28px 17px ;padding: 20px;">
+        <img mat-card-md-image style="width: 100% ; margin: 0px !important;" src="{{data.img}}" alt="Booking">
+      </mat-card-content>
+
+    </mat-card>
+    <!-- </div> -->
+
+
+
+
+  </div>
+</div>

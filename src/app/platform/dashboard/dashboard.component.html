@@ -1,21 +1,61 @@
-<div fxLayout="row" fxLayout.lt-lg="row wrap" fxFlex="100">
-    <div class="carddiv">
-        <ng-container *ngFor="let data of cardsData">
-            <div class="channelManagement" style="display: flex; ">
-                <mat-card class="{{ data.class }}  " style="  display: flex;   flex-direction: row;justify-content: space-between;  align-items: center;">
-                    <img mat-card-image class="cardAvatar" src="{{data.img}}" alt="">
-                    <mat-card-header>
+<div class="w-100-p h-100-p main">
 
-                        <mat-card-title class="cardeName">{{ data.name }}</mat-card-title>
+    <div fxLayout="row" fxLayout.lt-lg="row wrap" fxFlex="100">
 
-                    </mat-card-header>
-                    <mat-card-content class="card_content">
-                        {{data.value}}
-                    </mat-card-content>
+        <div class="carddiv ">
 
-                </mat-card>
-            </div>
-        </ng-container>
+            <mat-card *ngFor="let data of cardsData" class="{{ data.class }} channelManagement ">
+                <img mat-card-image class="cardAvatar" src="{{data.img}}" alt=""> <mat-card-title class="cardeName">{{
+                    data.name }}</mat-card-title>
+                <mat-card-header>
+                </mat-card-header>
+                <mat-card-content class="card_content">
+                    {{data.value}}
+                </mat-card-content>
+
+            </mat-card>
+        </div>
     </div>
 
-</div>
+
+    <div fxLayout="row" fxLayout="row wrap" fxFlex="95">
+        <div class="w-100-p h-100-p">
+            <div class="button-grid ">
+
+                <div class="btn-group">
+                    <button mat-raised-button class="primary_btn btn-customization btn-size" (click)="all()">
+                        All
+                    </button>
+                    <button mat-raised-button class="primary_btn btn-customization btn-size" (click)="guestHouse()">
+                        Guest House
+                    </button>
+                    <button mat-raised-button class="primary_btn btn-customization btn-size" (click)="appartments()">
+                        Appartments
+                    </button>
+                    <button mat-raised-button color="warn" class=" primary_btn btn-size" style="  margin-right:10px " (click)="rooms()">
+                        Rooms
+                    </button>
+                    <button mat-raised-button class="primary_btn btn-customization btn-size"
+                        (click)="honeymoonPackages()">
+                        Honeymoon Package
+                    </button>
+                    <button mat-raised-button class="primary_btn btn-customization btn-size"
+                        (click)="holidaysPackages()">
+                        Holidays Package
+                    </button>
+                </div>
+                <div class=" icon-group">
+                    <button mat-icon-button color="warn" >
+                        <mat-icon style=" margin-right: 10px ; "
+                            fontIcon="west"></mat-icon>
+
+                    </button>
+                    <button mat-icon-button color="warn" >
+                        <mat-icon fontIcon="east"></mat-icon>
+
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div>

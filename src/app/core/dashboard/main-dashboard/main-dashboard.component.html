@@ -2,10 +2,8 @@
  <div fxLayout="row" fxFlex="100" style="height: calc(100% - 66px);" autoscroll="false">
     <app-sidebar 
         class="sidebar" style="padding-right: 3px; overflow: auto; overflow-x: hidden;"></app-sidebar>
-    <div style="flex: 1; background: #F5F5F5; overflow: auto; margin: 0 0 0 74px ;"  >
+    <div style="flex: 1; background: #F5F5F5; overflow: auto; margin: 0 0 0 74px ; margin-bottom: 20px;"  >
         <router-outlet></router-outlet>
     </div> 
 </div>
 
-<!-- (signal)="onToggleMenu($event)" -->
-<!-- [@searchContainerState]="toggleMenu ? 'expanded' : 'collapsed'" [isCollapsed]="toggleMenu" -->

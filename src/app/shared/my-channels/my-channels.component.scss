@@ -1,38 +1,76 @@
-
-
-
-
-
-.topline{
+.topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .lable-div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    .lable-div{
-        display: flex;
-        align-items: center;
-        .labeltitle {
-            font-family: "Poppins";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 25px;
-            line-height: 140%;
-            color: #403f3f;
-            margin-right: 13px;
-          }
-        .btn-customization {
-            font-family: "Poppins";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 140%;
-            color: #ea504c;
-            background: #f2f2f2;
-            border-radius: 5px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-        
-            
-          }
+    .labeltitle {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 140%;
+      color: #403f3f;
+      margin-right: 13px;
     }
+    .btn-customization {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      color: #ea504c;
+      background: #f2f2f2;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.carddiv {
+  display: flex;
+  flex-wrap: wrap;
+  .card-body {
+    margin-top: 42px;
+  }
+  .toggledescription {
+    margin: 0;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13.0734px;
+    line-height: 140%;
+    /* or 18px */
+
+    color: #403f3f;
+  }
+
+  // .channelManagement {
+  //     margin-top: 42px;
+  //     .cardeName {
+  //       font-family: "Poppins";
+  //       font-style: normal;
+  //       font-weight: 600;
+  //       font-size: 20px;
+  //       line-height: 140%;
+  //       color: #ffffff;
+  //     }
+
+  //     .cardaction {
+  //       display: flex;
+  //       justify-content: space-between;
+  //     }
+  //     .toggledescription {
+  //       margin: 0;
+  //       font-family: "Poppins";
+  //       font-style: normal;
+  //       font-weight: 500;
+  //       font-size: 10px;
+  //       line-height: 140%;
+  //       color: #ffffff;
+  //     }
+  //   }
 }

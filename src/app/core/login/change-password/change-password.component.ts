@@ -88,14 +88,14 @@ export class ChangePasswordComponent implements OnInit {
 
   getErrorMessagePassword() {
     if (this.password.hasError('required')) {
-      return 'You must enter a value';
+      return '*1 capital, 1 special character, 1 number and min 8 digit password';
     }
 
-    return this.password.hasError('password') ? 'Not a valid email' : '';
+    return this.password.hasError('password') ? 'Not a valid Password' : '';
   }
   getErrorMessagecheckPassword() {
     if (this.checkPassword.hasError('required')) {
-      return 'You must enter a value';
+      return '*1 capital, 1 special character, 1 number and min 8 digit password';
     }
 
     return 'Two passwords that you enter is inconsistent!';

@@ -1,5 +1,9 @@
-<div fxLayout="column" fxLayout.lt-lg="row wrap" fxFlex="100">
+<div class="w-100-p h-100-p main" >
+
+<div fxLayout="row" fxLayout.lt-lg="row wrap" fxFlex="100">
     <label class="labeltitle"> Channel Management </label>
+
+</div>
     <div class="carddiv">
     <ng-container *ngFor="let data of cardsData" >
         <div class="channelManagement card-group-row" style="display: flex; width: 282px">
@@ -20,9 +24,11 @@
         </div>
     </ng-container>
 </div>
-<div fxLayout="row" fxLayout.lt-lg="row wrap" fxFlex="60" style="background-color: aqua;">
-<div class="my-channel-body">
-    <app-my-channels></app-my-channels>
-</div>
-</div>
+
+
+<div fxLayout="row" fxLayout.lt-lg="row wrap" fxFlex="80"  class="main">
+    <div class="my-channel-body">
+        <app-my-channels></app-my-channels>
+    </div>
+</div>    
 </div>
