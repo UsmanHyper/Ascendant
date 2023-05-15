@@ -9,12 +9,13 @@ import { RoomManagementComponent } from './room-management/room-management.compo
 import { PriceNPushChannelComponent } from './price-n-push-channel/price-n-push-channel.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { MaterialModule } from '../material.module';
-import {MatNativeDateModule} from '@angular/material/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MychannelModule } from '../shared/my-channels/my-channels-module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TableModule } from "../shared/table/table-module";
 
 
 @NgModule({
@@ -25,7 +26,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
         PriceNPushChannelComponent,
         UserManagementComponent,
         DashboardComponent
-        
     ],
     imports: [
         CommonModule,
@@ -38,8 +38,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
         BrowserAnimationsModule,
         MychannelModule,
         FlexLayoutModule,
-
-
+        TableModule
     ]
 })
 export class PlatformModule { }
